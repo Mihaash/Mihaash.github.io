@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #060a0f;
+  --color-surface: #0d1520;
+  --color-surface2: #111d2e;
+  --color-accent: #12D640;
+  --color-accent2: #00b8ff;
+  --color-text: #c8d8e8;
+  --color-text-dim: #5a7a9a;
+  --color-border: rgba(18, 214, 64, 0.15);
+  --color-danger: #ff3c3c;
+  --color-warning: #f0a500;
+
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Syne', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+a, button {
+  cursor: none;
+}
+
+/* Crosshair Cursor */
+#crosshair {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.04s linear;
+}
+
+#crosshair .ch-ring {
+  position: absolute;
+  inset: 0;
+  border: 1.5px solid var(--color-accent);
+  border-radius: 50%;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+#crosshair .ch-ring-outer {
+  position: absolute;
+  inset: -8px;
+  border: 1px solid rgba(18, 214, 64, 0.25);
+  border-radius: 50%;
+  transition: transform 0.2s ease;
+}
+
+#crosshair .ch-line {
+  position: absolute;
+  background: var(--color-accent);
+}
+
+#crosshair .ch-h {
+  top: 50%;
+  left: -14px;
+  right: -14px;
+  height: 1px;
+  margin-top: -0.5px;
+}
+
+#crosshair .ch-h::before,
+#crosshair .ch-h::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 1px;
+  background: var(--color-bg);
+}
+
+#crosshair .ch-h::before { left: 14px; right: 22px; }
+#crosshair .ch-h::after { left: 22px; right: 14px; }
+
+#crosshair .ch-v {
+  left: 50%;
+  top: -14px;
+  bottom: -14px;
+  width: 1px;
+  margin-left: -0.5px;
+}
+
+#crosshair .ch-v::before,
+#crosshair .ch-v::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 1px;
+  background: var(--color-bg);
+}
+
+#crosshair .ch-v::before { top: 14px; bottom: 22px; }
+#crosshair .ch-v::after { top: 22px; bottom: 14px; }
+
+#crosshair .ch-dot {
+  position: absolute;
+  width: 3px;
+  height: 3px;
+  background: var(--color-accent);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#crosshair.clicking .ch-ring {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+#crosshair.clicking .ch-ring-outer {
+  transform: scale(0.7);
+}
+
+/* Noise overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.04'/%3E%3C/svg%3E");
+  background-size: 200px;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.4;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb { background: var(--color-accent); border-radius: 2px; }
+
+/* Typing cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  background: var(--color-accent);
+  margin-left: 2px;
+  vertical-align: middle;
+  animation: blink 1s infinite;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
