@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Threat Intelligence Dashboard</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="../assets/css/theme.css" rel="stylesheet">
@@ -86,15 +86,6 @@
 
 <body>
 
-  <!-- ═══ CROSSHAIR CURSOR ══════════════════════════════════ -->
-  <div id="crosshair">
-    <div class="ch-ring-outer"></div>
-    <div class="ch-ring"></div>
-    <div class="ch-line ch-h"></div>
-    <div class="ch-line ch-v"></div>
-    <div class="ch-dot"></div>
-  </div>
-
   <div class="project-detail-container">
     <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> Back to Portfolio</a>
 
@@ -133,17 +124,10 @@
       </ul>
     </div>
 
-    <!-- Simulated Feed -->
-    <div class="detail-card">
-      <h5><i class="fas fa-rss"></i> Simulated Threat Feed</h5>
-      <div class="ticker-stream">
-        <div class="ticker-line"><span class="ts">00:01:22</span> <span>abuse.ch/urlhaus</span> <span class="sev-high">HIGH</span> <span>hxxp://194.165.16.28/bins/arm7</span></div>
-        <div class="ticker-line"><span class="ts">00:01:19</span> <span>abuse.ch/urlhaus</span> <span style="color:var(--accent2)">MED</span> <span>hxxps://malware-cdn.ru/payload.exe</span></div>
-        <div class="ticker-line"><span class="ts">00:01:14</span> <span>abuse.ch/feodo</span> <span class="sev-high">HIGH</span> <span>hxxp://45.142.212.100/c2/gate.php</span></div>
-        <div class="ticker-line"><span class="ts">00:01:05</span> <span>abuse.ch/bazaar</span> <span class="sev-high">HIGH</span> <span>hxxp://103.75.186.122/agent.bin</span></div>
-      </div>
-    </div>
-
+     
+    <a class="project-preview">
+      <img src="../assets/img/project/threat.png" alt="Multi-Tool Static Code Analysis Dashboard screenshot">
+    </a>
     <!-- Repository -->
     <div class="detail-card" style="text-align: center;">
       <h5>📂 Source Code</h5>

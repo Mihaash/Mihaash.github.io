@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title> Portfolio</title>
+  <title>Mihaash Dharan M. | Portfolio</title>
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <link href="assets/css/theme.css" rel="stylesheet">
@@ -15,34 +15,46 @@
 
 <body>
 
-  <!-- ═══ CROSSHAIR CURSOR ══════════════════════════════════ -->
-  <div id="crosshair">
-    <div class="ch-ring-outer"></div>
-    <div class="ch-ring"></div>
-    <div class="ch-line ch-h"></div>
-    <div class="ch-line ch-v"></div>
-    <div class="ch-dot"></div>
-  </div>
-
+  <div class="site-shell">
   <!-- ═══ HERO ════════════════════════════════════════════ -->
   <header id="header">
-    <div class="hero-inner">
-      <h1 class="hero-name">Mihaash<span>.</span><br>Dharan M</h1>
-      <p class="hero-role">I'm &nbsp;<span class="typing" id="typing"></span><span class="cursor"></span></p>
-      <nav class="hero-nav">
+    <div class="site-nav">
+      <a class="brand" href="#header" aria-label="Mihaash home"><span class="brand-mark">M</span> Mihaash</a>
+      <nav class="hero-nav" aria-label="Main navigation">
         <a href="#header" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#education">Education</a>
         <a href="#portfolio">Projects</a>
         <a href="#skills">Skills</a>
         <a href="https://drive.google.com/file/d/1ZSd3k1JiLyvS7suwvkWYEuvF4fPKgEGP/view?usp=sharing"
-          target="_blank">Resume</a>
-        <a href="#contacts">Contact</a>
+          target="_blank" rel="noopener">Resume</a>
       </nav>
-      <div class="hero-socials">
-        <a href="https://www.linkedin.com/in/mihaash-dharan/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/Mihaash" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="mailto:mihaashdharan68@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a class="nav-contact" href="#contacts">Contact <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i></a>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-tag"><span></span> Computer science · Cybersecurity</p>
+        <h1 class="hero-name">Hello, I'm<br><span>Mihaash Dharan M.</span></h1>
+        <p class="hero-role">I build things for <span class="typing" id="typing"></span><span class="cursor"></span></p>
+        <p class="hero-intro">Computer science student focused on DevSecOps, cloud infrastructure, and security. I turn complex systems into tools that are practical, resilient, and easier to trust.</p>
+        <div class="hero-actions">
+          <a href="#portfolio" class="button-primary">Explore my work <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          <a href="#contacts" class="button-quiet">Let's talk</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://www.linkedin.com/in/mihaash-dharan/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Mihaash" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:mihaashdharan68@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <span class="social-caption">Coimbatore, India</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <img src="https://avatars.githubusercontent.com/u/165394789?v=4" alt="Mihaash's GitHub profile avatar">
+          <span class="portrait-initials" aria-hidden="true">MD</span>
+        </div>
+        <div class="hero-note"><span class="note-icon"><i class="fas fa-shield-halved" aria-hidden="true"></i></span><span><strong>Security-minded</strong><small>Building with care</small></span></div>
+        <div class="hero-orbit" aria-hidden="true"></div>
       </div>
     </div>
   </header>
@@ -498,6 +510,18 @@
           <div class="devops-item"><img src="https://www.vectorlogo.zone/logos/apache_maven/apache_maven-ar21.svg" alt="Maven"><span>Maven</span></div>
         </div>
       </div>
+      <div class="skills-block highlighted-block">
+        <h4>Networking &amp; Monitoring</h4>
+        <div class="lang-logos">
+          <div class="devops-item"><img src="https://cdn.simpleicons.org/fortinet" alt="Fortinet"><span>FortiGate</span></div>
+          <div class="devops-item"><img src="https://cdn.simpleicons.org/opnsense" alt="OPNsense"><span>OPNsense</span></div>
+          <div class="devops-item"><img src="https://api.iconify.design/mdi/router-network.svg?color=%23526776" alt="Managed network switches"><span>Managed Switches</span></div>
+          <div class="devops-item"><img src="https://api.iconify.design/mdi/lan.svg?color=%23526776" alt="Virtual LAN"><span>VLAN</span></div>
+          <div class="devops-item"><img src="https://api.iconify.design/mdi/ethernet-cable.svg?color=%23526776" alt="10 gigabit SFP plus networking"><span>10G SFP+</span></div>
+          <div class="devops-item"><img src="https://api.iconify.design/mdi/server-network.svg?color=%23526776" alt="Simple Network Management Protocol"><span>SNMP</span></div>
+          <div class="devops-item"><img src="https://api.iconify.design/mdi/monitor-dashboard.svg?color=%23526776" alt="LibreNMS monitoring dashboard"><span>LibreNMS</span></div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -544,6 +568,7 @@
   <footer>
     <p>© 2025 Mihaash Dharan M &nbsp;·&nbsp; Built with passion for security</p>
   </footer>
+  </div>
 
   <!-- ═══ SCRIPTS ═══════════════════════════════════════════ -->
   <script src="assets/vendor/jquery/jquery.min.js"></script>
